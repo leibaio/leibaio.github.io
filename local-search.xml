@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Biweek Report 20211101~20211115</title>
+    <link href="/2021/11/09/BiweekReport_20211101_20211115/"/>
+    <url>/2021/11/09/BiweekReport_20211101_20211115/</url>
+    
+    <content type="html"><![CDATA[<h2 id="双周汇报"><a href="#双周汇报" class="headerlink" title="双周汇报"></a>双周汇报</h2><p>2021～2022学年第一学期  第9、10周（2021年11月1日～2021年11月15日）</p><p>汇报时间：2021年11月8日</p><h4 id="一、本周主要工作内容"><a href="#一、本周主要工作内容" class="headerlink" title="一、本周主要工作内容"></a>一、本周主要工作内容</h4><ul><li><p>文献阅读：阅读了一些有关于功能自动化测试、云测试的文献资料，了解了一些自动化回归测试的概念和基本流程，开源web自动化工具Selenium。</p></li><li><p>学习工作：</p><p>学习了文档排版系统LaTex，并用其进行部分课程作业的编写；</p><p>网络安全课程作业选择了WEB前端安全的分析，对于WEB前端安全的一些攻击防御方式有所了解；</p><p>开始学习一个基于Promise的HTTP库Axios；</p><p>找到一个软件测试教程，开始对各类测试模型进行了解。</p><p><a href="https://codingdict.com/article/28668">https://codingdict.com/article/28668</a></p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gw8q845q6cj30ko12ugnl.jpg" style="zoom:30%;" /></li></ul><h4 id="二、阅读文献笔记及总结"><a href="#二、阅读文献笔记及总结" class="headerlink" title="二、阅读文献笔记及总结"></a>二、阅读文献笔记及总结</h4><h5 id="文献："><a href="#文献：" class="headerlink" title="文献："></a>文献：</h5><p>[1]马天鸣,梁琛.Selenium在电话自动拨测系统中的应用[J].计算机技术与发展,2021,31(10):141-145+153.</p><p>[2]彭珲,耿杰恒,张晓娜,李晓利.软件云测试平台的设计与实现技术[J].电脑编程技巧与维护,2021(08):13-15.</p><p>[3]以Selenium+Chrome为核心的数据采集系统设计[J]. 黄孝伦,王东.  计算机技术与发展. 2020(09).</p><h5 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h5><p>[1]</p><ol><li><p>在项目周期长，模块功能复杂的情况下，采用手工方式对系统功能进行多次重复的验证时，会消耗大量时间，增加测试成本。因此，选择正确的回归测试策略来改进测试的效率和有效性时很有必要的。</p></li><li><p>电话自动拨测系统需求变动不频繁、项目周期长、UI界面稳定变动少。-&gt; 引入UI自动化测试。</p></li><li><p>selenium+python，测试过程：<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gw91ndg10pj30mw04uglu.jpg" style="zoom:50%;" /></p></li><li><p>测试脚本编写过程中，系统登录验证码有四种解决方法：（1）去掉这部分代码（安全风险），（2）使用一个万能验证码（需要开发的协助），（3）通过cookie直接登录，避开验证码（无法对验证码进行自动化测试），（4）通过截取验证码区域，使用webdriver。使用验证码id定位到该验证码的位置，获取验证码的位置和大小，在截取后，使之灰度并增强饱和度，识别图片内容转化为字符串。（安全，可行，✅）</p></li><li><p>单元测试对技术要求高，白盒测试人员和软件开发人员才能胜任，使用单元测试框架使得过程简单化。系统中单元测试框架使用python中的unittest:</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gw91ot4ksyj30k60cy0t9.jpg" style="zoom:50%;" /></li><li><p>页面定位元素时，系统主要使用id、name和class属性来查找元素。上述无法生效，使用XPath（XML路径语言）进行绝对或相对定位。</p></li><li><p>操作页面时，使用Webdriver进行和浏览器的交互。没有定位到元素时，可能没有找到标签，也可能网速原因没有及时加载，会导致程序报错，设置线程等待：隐式等待（异步，如网络延迟，Ajax动态加载元素响应时间不一致）、显式等待（同步）；</p></li><li><p>使用断言进行测试优化，可以使用unittest的拓展HMTLTestRunner脚本实现生成测试报告，使用python的第三方库yagmail实现自动发送邮件功能等。</p></li></ol><p>[2]</p><ol><li>大型分布式软件测试面临的难题：（1）环境构建难。自身结构和分布式运行流程复杂，构建其运行的基础网络环境和实际的网络环境信道不一定相同。（2）驱动运行难。不同岗位的操作在统一的任务驱动下，协调操作分布式系统软件运行共同完成统一目标任务。对于软件测试，很难每个席位配置一个操作人员。其次，被测分布式系统外围系统和设计会产生数据。需要考虑不同节点信息的时序、关联。（3）测试评估难。大型分布式系统出了需要考虑数据之间的关联性、时效性、耦合性外，还要考虑数据的可采集性，有些数据外界难以获取，有一些是以加密形式存在的。这些导致复杂分布式系统测试的数据采集和分析困难。</li><li>根据被测软件特点和软件测评任务特点，建立软件云测平台：分为三个系统：云基础分系统、测试运行支撑分系统、测试数据采集与分析分系统。<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gw91p9bm1pj30o20c0abm.jpg"></li><li>云测试平台运行设计两种不同的工作流程：浏览器/服务器，客户端/服务器。</li><li>运行逻辑：step1: 创建被测对象，包括程序、各方面文档内容上传到库；step2:用户申请测试对象进行出库，创建具体任务，由云基础平台负责环境设计、定制、测试需要的工具以及数据采集的Agent；step3: 测试的数据由Agent采集，上传到系统中，进行存储、解析，再格式化存储，供数据综合分析模块使用。</li><li>测试平台数据流使用SpringCloud微服务框架，包括集群、配置中心、服务注册EUREKA、网关、路由。用户身份信息借助Shiro组件完成权限控制；远程客户端连通使用Socket协议；日志由SL4J完成处理；存储由MySQL集群完成；借助QUARTZ完成定时任务；借助Redis高速缓存完成对缓存的依赖。</li></ol><p>[3]</p><ol><li><p>医疗大数据系统数据庞大、系统异构。使用爬虫技术进行抓取指标数据，并按照要求进行数据清洗。</p></li><li><p>系统采用CS模式，服务器段负责接受数据交给监测平台存储和处理，客户端在各医院信息系统进行数据采集、清洗和传输。具体技术使用Selenium + ChromeDrive （Chrome的自动代理框架控制浏览器）构建网络爬虫。</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gw91pl86lqj30g20do3z2.jpg" style="zoom:50%;" /></li><li><p>和传统爬虫不同：系统根据指标特点构建爬虫。由于各个医院采用不同厂商信息系统，系统、数据和存储之间存在异构，所以每个客户端通过配置获取每个页面的元素位置，然后抓取数据。程序运行客户端根据配置文件生成Java源码，然后调用javac编译。以此满足各医院自定义配置文件需求，解决异构问题。</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gw91pwezqmj30dq0lqwf6.jpg" style="zoom:50%;" /></li><li><p>URl以及登录信息配置：为提高响应速度，使用并行方式分别抓取相应系统中的数据，登录验证是爬虫抓取需要用户权限的数据的必要模块，在配置URL时，每一条URL对应一对用户名和密码，然后根据该凭证进行模拟登录。由于部分系统的session凭证设置时效，为解决这个问题，监测到异常时，重新模拟登录，获取新的session，同时抓取数据采用Headless模式。</p></li><li><p>数据抓取：采用配置方式获取指标数据在系统页面的位置元素。虽然各个医院业务系统存在异构，但大体流程相同。因此根据不同的系统设计一个基本流程模板，在配置时根据模板进行调整。</p></li><li><p>数据存储和清洗：不断的抓取数据可能会影响医院业务的正常运行，因此抓取原始界面进行缓存，出现问题时读取缓存页面，不必重新抓取。数据清洗包括：(1). 指标汇总处理; (2). 数据描述一致性处理</p></li></ol><h4 id="三、下周工作重点及周计划（方案）"><a href="#三、下周工作重点及周计划（方案）" class="headerlink" title="三、下周工作重点及周计划（方案）"></a>三、下周工作重点及周计划（方案）</h4><ul><li>继续学习LaTex文档排版系统，在后面的作业以及文章中能够更加熟练使用</li><li>根据找到的软件测试教程文档，对于各个测试模型系统学习</li><li>根据11月3日泽众软件测试公司的产品介绍，对于当下企业在使用的测试技术进行了解</li><li>继续学习Axios，了解node.js中http请求以及响应等</li><li>继续学习Vue框架，熟悉状态管理模式Vuex</li><li>继续阅读自动化测试、云测试、测试优化、基于模型测试等相关文献</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>BiweekReport</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello, it&#39;s leibaio</title>
+    <link href="/2021/11/09/hello-world/"/>
+    <url>/2021/11/09/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to my blog!  This is my very first post. </p><p>It’s built using Github and <a href="https://hexo.io/">Hexo</a>，the theme is <a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a>.</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hello</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
