@@ -24,8 +24,8 @@
   
   <entry>
     <title>Hello, it&#39;s leibaio</title>
-    <link href="/2021/11/09/hello-world/"/>
-    <url>/2021/11/09/hello-world/</url>
+    <link href="/2021/11/09/hello/"/>
+    <url>/2021/11/09/hello/</url>
     
     <content type="html"><![CDATA[<p>Welcome to my blog!  This is my very first post. </p><p>It’s built using Github and <a href="https://hexo.io/">Hexo</a>，the theme is <a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a>.</p>]]></content>
     
