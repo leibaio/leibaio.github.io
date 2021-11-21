@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/astro_mona.png">
+  <link rel="icon" href="/img/astro_mona.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="leibaio">
+  <meta name="keywords" content="">
+  <meta name="description" content="双周汇报2021～2022学年第一学期  第11、12周（2021年11月16日～2021年11月30日） 汇报人：汤伟杰    汇报时间：2021年11月22日 一、本周主要工作内容 文献阅读：阅读了一些有关于缺陷定位、静态分析、程序规约、信息检索等相关的文献资料。 学习工作：使用了 Github Pages 和 Hexo 搭建了个人博客网站 leibaio.space ；和同组同学报名参加挑战">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Biweek Report 20211116~20211130">
+<meta property="og:url" content="https://leibaio.github.io/2021/11/22/BiweekReport_20211116_20211130/index.html">
+<meta property="og:site_name" content="leibaio">
+<meta property="og:description" content="双周汇报2021～2022学年第一学期  第11、12周（2021年11月16日～2021年11月30日） 汇报人：汤伟杰    汇报时间：2021年11月22日 一、本周主要工作内容 文献阅读：阅读了一些有关于缺陷定位、静态分析、程序规约、信息检索等相关的文献资料。 学习工作：使用了 Github Pages 和 Hexo 搭建了个人博客网站 leibaio.space ；和同组同学报名参加挑战">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwkjgl2d1lj30k00ck3zl.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwmjv2qvdoj30zu08ujsi.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwmkcxczyjj30ss0c83zs.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwml03lpt7j31a00dyac9.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwmof964muj31230u0jwu.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwn997y5hij30mq0fimxr.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwn9fifgywj30v60j8myr.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwnb8a4obqj30ma0b2dg9.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwnbbkqv35j316809240c.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwnbca0y0kj316i0bego5.jpg">
+<meta property="article:published_time" content="2021-11-21T16:28:35.000Z">
+<meta property="article:modified_time" content="2021-11-21T18:10:33.961Z">
+<meta property="article:author" content="leibaio">
+<meta property="article:tag" content="BiweekReport">
+<meta property="article:tag" content="缺陷定位">
+<meta property="article:tag" content="静态分析">
+<meta property="article:tag" content="程序规约">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gwkjgl2d1lj30k00ck3zl.jpg">
+  
+  <title>Biweek Report 20211116~20211130 - leibaio</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"leibaio.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>leibaio</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Biweek Report 20211116~20211130">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-22 00:28" pubdate>
+        2021年11月22日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Biweek Report 20211116~20211130</h1>
+            
+            <div class="markdown-body">
+              <h2 id="双周汇报"><a href="#双周汇报" class="headerlink" title="双周汇报"></a>双周汇报</h2><p>2021～2022学年第一学期  第11、12周（2021年11月16日～2021年11月30日）</p>
+<p>汇报人：汤伟杰    汇报时间：2021年11月22日</p>
+<h4 id="一、本周主要工作内容"><a href="#一、本周主要工作内容" class="headerlink" title="一、本周主要工作内容"></a>一、本周主要工作内容</h4><ul>
+<li>文献阅读：阅读了一些有关于缺陷定位、静态分析、程序规约、信息检索等相关的文献资料。</li>
+<li>学习工作：使用了 Github Pages 和 Hexo 搭建了个人博客网站 <a target="_blank" rel="noopener" href="https://leibaio.space/">leibaio.space</a> ；和同组同学报名参加挑战杯创业赛，根据研二师兄的基于 EAIDK-310 的集成化小车设计加设部分功能进行包装成产品；和本科同学组队参加外包服务大赛，项目将使用 JavaEE + Linux + MySQL 构建一个 PDF 转 EPUB 工具；</li>
+</ul>
+<h4 id="二、阅读文献笔记及总结"><a href="#二、阅读文献笔记及总结" class="headerlink" title="二、阅读文献笔记及总结"></a>二、阅读文献笔记及总结</h4><h5 id="文献："><a href="#文献：" class="headerlink" title="文献："></a>文献：</h5><p>[1] E. Giger, M. D’Ambros, M. Pinzger and H. C. Gall, “Method-level bug prediction,” Proceedings of the 2012 ACM-IEEE International Symposium on Empirical Software Engineering and Measurement, 2012, pp. 171-180, doi: 10.1145/2372251.2372285.</p>
+<p>[2] 曹鹤玲,刘昱,赵晨阳,王玉华.程序缺陷自动修复研究进展及关键问题[J/OL].小型微型计算机系统:1-13[2021-11-13].</p>
+<p>[3] 李政亮,陈翔,蒋智威,顾庆.基于信息检索的软件缺陷定位方法综述[J].软件学报,2021,32(02):247-276.</p>
+<h5 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h5><p>[1]</p>
+<p>[2]</p>
+<ol>
+<li><p>程序缺陷自动修复是针对程序中存在的缺陷，自动生成相应的程序补丁，进而使程序恢复正常运行。根据补丁生成方法的不同，可以分为基于搜索的、基于语义的、基于机器学习的以及基于错误报告驱动的4类程序缺陷自动修复方法。</p>
+</li>
+<li><p>程序缺陷自动修复研究框架：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwkjgl2d1lj30k00ck3zl.jpg" srcset="/img/loading.gif" lazyload style="zoom: 67%;" />
+
+<p>定位阶段可以通过缺陷定位策略找出可疑位置，定位方法可以分为动态和静态两种缺陷定位方法。</p>
+<p>（1）动态：通过对测试用例的执行行为和运行结果分析，基于特定模型进行定位缺陷语句的可能位置，主流是基于频谱的缺陷定位，通过执行测试用例获取程序频谱，而后分析频谱定位程序缺陷。</p>
+<p>（2）静态：通过分析缺陷报告和程序模块的文本内容并提取特征，基于特定模型确定可疑的程序语句，不需要执行测试用例，不会受到程序规模和编程语言等因素的影响，基于信息检索的缺陷定位（Information Retrieval-Based Bug Localization，IRBL）是目前静态缺陷定位研究中的热点，广泛用于基于错误报告驱动的程序缺陷自动修复方法。补丁生成阶段按照一定的修复规则逐个对可疑缺陷代码进行处理，生成相应补丁。</p>
+</li>
+<li><p>在验证时，一方面要检测补丁是否成功修复原有缺陷，另一方面要检验原有程序是否被破坏。对补丁进行验证的开销往往较大，利用候选补丁排序技术有助于提高修复效率和缩减验证成本。</p>
+</li>
+<li><p>基于搜索的程序缺陷自动修复方法：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwmjv2qvdoj30zu08ujsi.jpg" srcset="/img/loading.gif" lazyload style="zoom: 43%;" />
+
+<p>利用了基于搜索的软件工程（Search Based Software Engineering，SBSE）中的蚁群算法、粒子群优化、遗传算法和模拟退火等算法。核心思想：在一个搜索空间内寻找补丁并进行正确性验证的过程。</p>
+<p>存在问题：1）设置一个合适的空间，空间过大是导致效率低下，并会产生大量疑似补丁。过小会导致空间可能不存在正确补丁；2）生成的补丁可能通过测试但是会违背程序语义，如何剔除是一个关键问题。3）测试用例的质量决定了定位缺陷的准确性以及验证补丁的正确性，如何生成一个高质量测试用例也是一个关键问题。</p>
+</li>
+<li><p>基于语义的程序缺陷自动修复方法：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwmkcxczyjj30ss0c83zs.jpg" srcset="/img/loading.gif" lazyload style="zoom: 43%;" />
+
+<p>正确性通常高于基于搜索的程序缺陷自动修复。首先定位到可以的缺陷实体，对实体进行排序；其次生成含有缺陷实体的输入输出预期值；然后收集程序运行信息，提取补丁需要满足的约束；最后将修复约束作为合成补丁的规约，并用约束求解器生成补丁。相比于基于搜索的，补丁基本都能通过验证。</p>
+<p>存在问题：1）通过约束生成补丁，生成正确补丁的概率更高，但需要更多的程序信息，并且面临算法执行时间长、部署和实施困难的问题；2）方法建立在“补丁通过测试用例，则为正确补丁”，不可避免会产生过拟合问题；3）在小规模程序上展现出良好修复效果，由于大多使用符号执行以及约束求解问题，难以应用在较为复杂的程序上。</p>
+</li>
+<li><p>基于机器学习的程序缺陷自动修复方法：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwml03lpt7j31a00dyac9.jpg" srcset="/img/loading.gif" lazyload style="zoom:43%;" />
+
+<p>可以有效解决基于搜索的和基于语义的局限。首先获取数据集，进行数据预处理并将数据送至修复模型；其次结合机器学习技术对模型进行训练；然后用训练好的模型为待修复程序生成候选补丁；最后对候选补丁进行排序和正确性验证。</p>
+<p>存在问题：1）源代码不同于自然语言，原始数据相当嘈杂，会对训练产生极大程序噪音。如何过滤原始数据是基于机器学习面临的一个关键问题；2）自然语言中，类似于标点符号的错误是可以接受的，但在编程语言中，标识符、数字等的误用会导致编译器产生错误，并且依赖关系也更长；3）由于变量、常量等定义的任意性，且字母的大小写在编程语言中有不同含义，所以需要处理的词汇量巨大，如何减小需要处理的词汇数据也是面临的关键问题。</p>
+</li>
+<li><p>基于错误报告驱动的程序缺陷自动修复方法</p>
+<p>大多实际情况中，有关测试用例的通用假设不存在，许多测试不能通过测试套件挖掘，使用基于错误报告的可以应对，因为错误报告中含有丰富的关于程序执行以及用户反馈的错误信息。最大的优势是不需要对测试用例进行假设，一定程度上增加了此类方法的实际可用性。</p>
+<p>存在问题：1）第一阶段是对错误报告进行解析、筛选和分类，然而错误报告的数量通常较多，需要耗费大量资源，设计一个更加合理高效的算法是面临的一个关键问题；2）为了从错误报告生成补丁，需要提取关于错误的详细信息，现有的提取技术智能获取到简单的错误描述，如何改进现有技术以获取全面的错误描述进而得到错误产生的根本原因也是一个关键问题。</p>
+</li>
+<li><p>缺陷库</p>
+<p>程序缺陷自动修复的检验离不开缺陷高质量的缺陷库。高质量的缺陷库需要具备完备的测试集，且要求缺陷的来源必须是真实的项目。下表给出了一些缺陷库对应的相关信息。</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwmof964muj31230u0jwu.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" /></li>
+</ol>
+<p>[3]</p>
+<ol>
+<li><p>基于信息检索的软件缺陷定位是当前软件缺陷定位的研究热点，主要分析缺陷报告文本和程序模块代码，通过计算缺陷报告和程序模块之间的相似度，选取与缺陷报告相似度最高的若干程序模块，将其推荐给开发人员。</p>
+</li>
+<li><p>对需求理解的偏差、不合理的软件开发过程、开发人员的疏忽，均有可能在项目中引入软件缺陷。传统的调试方法是借助手工，可以代码处设置断点，重复执行失败的测试用例，定位代价高、对缺陷报告信息利用不充分、费时费力。</p>
+</li>
+<li><p>动态缺陷定位和静态缺陷定位，概念同上述 [2] 2，静态缺陷中基于信息检索的缺陷定位（information retrieval-based bug localization，简称IRBL）是目前静态缺陷定位研究热点，也是本文重点关注的研究问题。</p>
+</li>
+<li><p>IRBL可视为概念定位（concern localization）或者特征定位（feature localization）的一个特例，当需要定位的概念或特征都为缺陷时，又被称为缺陷定位。从 IEEE Explore、ACM Digital Library、Elsevier、Springer、CNKI 等学术论文数据库进行检索，关键词包括 bug localization、fault localization、information retrieval、bug localisation等，然后通过人工审查。2013年后，随着公开的数据集和共享代码不断增多，针对IRBL方法的研究逐渐成为静态缺陷定位领域的主流研究方向。</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwn997y5hij30mq0fimxr.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" /></li>
+<li><p>IRBL针对一个缺陷报告，尝试定位到可能包含缺陷的程序模块，其输入为缺陷报告和所有候选程序模块，通过建立程序模块语料库、建立索引、构建查询、检索和排序，推荐给开发人员一个有序列表（按照含有缺陷的可能性从高到低排序）。</p>
+<p>缺陷报告一般包含标题(title)、描述(description)、评论(comment)、产品(product)、组件(component)、版本号(version)和提交时间等信息。研究框架如下图：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwn9fifgywj30v60j8myr.jpg" srcset="/img/loading.gif" lazyload style="zoom:43%;" />
+
+<p>IRBL过程包括：模型构建阶段和模型应用阶段。</p>
+<p>模型构建包括：1）挖掘缺陷跟踪系统、版本控制系统、API文档等数据源，从中搜集缺陷报告、程序模块和提交日志等信息，建立缺陷报告与与程序模块的关联，构建出缺陷定位数据集；同时IRBL的输入也由所搜集的数据源信息决定。2）设计出衡量缺陷报告与程序模块相关度的特征，分析程序模块含有缺陷的概率，借助这些特征构建出IRBL（缺陷定位）模型。</p>
+<p>模型应用阶段，处理一个新的缺陷报告，基于前一阶段流程提取特征，并用训练好的缺陷定位模型完成对该缺陷报告的定位，将有序列表推荐给开发人员。根据应用场景不同需求，缺陷定位粒度和结果不同，输入信息、特征提取方式和检索过程都会不同，生成不同的有序列表。</p>
+</li>
+<li><p>通过上述分析，影响缺陷定位性能的3个重要因素：数据源、检索模型、场景应用。</p>
+</li>
+<li><p>数据源分析：</p>
+<p>不同数据源划分为三类：（1）缺陷报告和程序模块；（2）项目元数据；（3）测试用例的执行信息；</p>
+<p>从缺陷跟踪系统挖掘缺陷报告信息；从版本控制系统（如Git、SVN或CSV等）挖掘程序模块代码和元数据（即版本历史信息和代码变更信息）；测试用例通过对项目运行多个测试用例生成并获取。</p>
+<p>1）原始的缺陷报告和程序模块具有很多噪音词汇及数据。进行数据预处理，包括文本标准化（text normalization）、停用词（stopword）移除以及词干提取（stemming）这3步。</p>
+<ul>
+<li>文本标准化：从文档中移除特殊字符和标点，将文档切分成不连续的单词，源代码的标识符，依据驼峰式分割（camel case splitting）进一步切分，如 “processFile” 可被切分为 “process” 和 “file”。</li>
+<li>停用词移除：停用词指在文档中频繁出现，但在区分不同文档中作用极小的单词，如 “a“ ”on“等，对程序模块而言，需要移除如 “int” “private” 等。</li>
+<li>词干提取：将单词转换成对应的词干形式，如 “localized” “localization” “localize” 和 “locally” 都可还原为词干 “local”。</li>
+</ul>
+<p>2）缺陷报告与程序模块相关性度量主要从3个角度出发：文本信息、堆栈跟踪、相似缺陷报告。</p>
+<ul>
+<li>文本信息：这类信息的常见输入是缺陷报告的总结和描述以及程序模块的文本内容，可以采用文本检索方法直接计算出缺陷报告和程序模块之间的相关性，也可基于语义模型计算。</li>
+<li>堆栈跟踪：缺陷报告质量有高有低，有时缺陷报告中会包含程序执行失败后的堆栈跟踪信息，开发人员首先检查堆栈跟踪涉及到的程序模块进行缺陷定位。使用这一额外信息，可以有效提高缺陷定位的性能，通常作为计算缺陷报告和程序模块相关性的补充。</li>
+<li>相似缺陷报告：从已修复的缺陷报告中搜索出与当前缺陷报告相似的缺陷报告，相似缺陷报告评分作为增强缺陷报告与缺陷模块相关性的评分。</li>
+</ul>
+<p>3） 程序模块缺陷概率：（1）从程序模块调用关系；（2）代码异味（code smell）</p>
+</li>
+<li><p>检索模型：</p>
+<p>基于通用检索模型的方法：（1）向量空间模型（VSM）；（2）主题模型，有潜在语义分析（latent semantic analysis）和隐含狄利克雷分布；（3）概率检索模型，包括SUM（smoothed unigram model）和 BM25；</p>
+<p>优化方法：（1）基于输入源拓展的方法；（2）基于优化函数的方法；（3）基于查询重构的方法；</p>
+</li>
+<li><p>场景应用：根据不同的场景需求，开发人员对缺陷定位粒度和准确率的需求不同，基于IRBL的定位粒度，IRBL方法输出级别可分为文件（类）级别、函数级别、语句级别和代码变更级别。下图为IRBL不同定位粒度方法的论文数统计。</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwnb8a4obqj30ma0b2dg9.jpg" srcset="/img/loading.gif" lazyload style="zoom:43%;" /></li>
+<li><p>性能评测指标分析：</p>
+<p>文章对已有 IRBL 研究中常用的性能评测指标的累计使用次数进行了统计，并从大到小进行排序；同时给出了每个指标的首次使用时间（包括对应的参考文献），最终结果如下：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwnbbkqv35j316809240c.jpg" srcset="/img/loading.gif" lazyload style="zoom:43%;" /></li>
+<li><p>评价数据集总结：</p>
+<p>因开源软件项目数据获取相对容易，研究人员一般使用开源项目进行科学研究，下表为评测数据集的使用情况统计。</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwnbca0y0kj316i0bego5.jpg" srcset="/img/loading.gif" lazyload style="zoom:43%;" /></li>
+</ol>
+<h4 id="三、下周工作重点及周计划（方案）"><a href="#三、下周工作重点及周计划（方案）" class="headerlink" title="三、下周工作重点及周计划（方案）"></a>三、下周工作重点及周计划（方案）</h4><ul>
+<li>部分32课时考试科目如英语、自然辩证法等开始复习</li>
+<li>继续阅读有关于缺陷定位的文献资料，主要针对Ｃ语言的源程序如何定位缺陷</li>
+<li>根据参加项目，对于相关技术栈进行学习补充</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/BiweekReport/">BiweekReport</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BC%BA%E9%99%B7%E5%AE%9A%E4%BD%8D/">缺陷定位</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">静态分析</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A8%8B%E5%BA%8F%E8%A7%84%E7%BA%A6/">程序规约</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/09/BiweekReport_20211101_20211115/">
+                        <span class="hidden-mobile">Biweek Report 20211101~20211115</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>leibaio</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Blog</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
