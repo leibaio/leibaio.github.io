@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/astro_mona.png">
+  <link rel="icon" href="/img/astro_mona.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="leibaio">
+  <meta name="keywords" content="">
+  <meta name="description" content="双周汇报2021～2022学年第一学期  第13、14周（2021年12月01日～2021年12月14日） 汇报人：汤伟杰    汇报时间：2021年12月6日 一、本周主要工作内容 文献阅读：阅读了有关于缺陷定位、静态分析（尤其针对C语言）等相关的文献资料。  学习工作：学习了基于Promise的http库axios的使用、配置以及模块封装；继续学习Vue框架，基于Vue搭建一个商场项目，项目地">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Biweek Report 20211201~20211214">
+<meta property="og:url" content="https://leibaio.github.io/2021/12/06/BiweekReport_20211201_20211214/index.html">
+<meta property="og:site_name" content="leibaio">
+<meta property="og:description" content="双周汇报2021～2022学年第一学期  第13、14周（2021年12月01日～2021年12月14日） 汇报人：汤伟杰    汇报时间：2021年12月6日 一、本周主要工作内容 文献阅读：阅读了有关于缺陷定位、静态分析（尤其针对C语言）等相关的文献资料。  学习工作：学习了基于Promise的http库axios的使用、配置以及模块封装；继续学习Vue框架，基于Vue搭建一个商场项目，项目地">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx1xc8u53bj31ka0u0gq7.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx47litsmhj30u00v5di8.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx482sx8tzj313e0o80vs.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx4kxmxce2j30b00igq3h.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx4l1yd3tfj30gy0dcq3i.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx4l468gnyj30d80cejrq.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx4leq7k9tj30o60we40d.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx4ljwau6xj30oo03mq34.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx4lr64owxj30j20akgm4.jpg">
+<meta property="article:published_time" content="2021-12-06T09:12:45.000Z">
+<meta property="article:modified_time" content="2021-12-06T17:07:40.552Z">
+<meta property="article:author" content="leibaio">
+<meta property="article:tag" content="BiweekReport">
+<meta property="article:tag" content="静态分析">
+<meta property="article:tag" content="规则检测">
+<meta property="article:tag" content="抽象语法树">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gx1xc8u53bj31ka0u0gq7.jpg">
+  
+  <title>Biweek Report 20211201~20211214 - leibaio</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"leibaio.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>leibaio</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Biweek Report 20211201~20211214">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-12-06 17:12" pubdate>
+        2021年12月6日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      6 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Biweek Report 20211201~20211214</h1>
+            
+            <div class="markdown-body">
+              <h2 id="双周汇报"><a href="#双周汇报" class="headerlink" title="双周汇报"></a>双周汇报</h2><p>2021～2022学年第一学期  第13、14周（2021年12月01日～2021年12月14日）</p>
+<p>汇报人：汤伟杰    汇报时间：2021年12月6日</p>
+<h4 id="一、本周主要工作内容"><a href="#一、本周主要工作内容" class="headerlink" title="一、本周主要工作内容"></a>一、本周主要工作内容</h4><ul>
+<li><p>文献阅读：阅读了有关于缺陷定位、静态分析（尤其针对C语言）等相关的文献资料。</p>
+</li>
+<li><p>学习工作：学习了基于Promise的http库axios的使用、配置以及模块封装；继续学习Vue框架，基于Vue搭建一个商场项目，项目地址：<a target="_blank" rel="noopener" href="https://github.com/leibaio/supermall">https://github.com/leibaio/supermall</a></p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx1xc8u53bj31ka0u0gq7.jpg" srcset="/img/loading.gif" lazyload style="zoom: 33%;"/>
+
+<p>开始了解编译原理、软件静态分析相关知识；学习非关系型数据库Mongo相关知识；参加学校华为中国芯技术大赛，学习鲲鹏软件迁移相关知识；</p>
+</li>
+</ul>
+<h4 id="二、阅读文献笔记及总结"><a href="#二、阅读文献笔记及总结" class="headerlink" title="二、阅读文献笔记及总结"></a>二、阅读文献笔记及总结</h4><h5 id="文献："><a href="#文献：" class="headerlink" title="文献："></a>文献：</h5><p>[1] 方登辉. 基于抽象语法树的代码静态缺陷检测工具开发[D].北京邮电大学,2018.</p>
+<p>[2] 刘海燕,杨洪路,王崛.C源代码静态安全检查技术[J].计算机工程,2004(02):28-30.</p>
+<p>[3] 张亚楠,谢冬红,邵学彬.静态代码缺陷定位技术研究[J].信息与电脑(理论版),2017(23):16-19.</p>
+<h5 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h5><p>[1]</p>
+<ol>
+<li><p>文章完成了基于抽象语法树的静态代码检测工具的开发，使用Clang编译器将源代码转化为抽象语法树，分析缺陷代码和正常代码的差异性，记录区分差异性的关键信息，利用这些信息基于GJB安全规范和PVS缺陷库构建检测规则，之后便利语法树，遍历过程调用规则检测，记录违反规则的代码片段及错误信息，生成测试报告。</p>
+</li>
+<li><p>软件测试分类</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx47litsmhj30u00v5di8.jpg" srcset="/img/loading.gif" lazyload style="zoom:33%;" /></li>
+<li><p>针对缺陷间的差异性，很难找到统一的检测规则，为了解决问题，文章使用基于规则的检测方式，针对每条缺陷进行单独构造定制化检测规则。使用TDD开发模式，文章具体内容包括：缺陷库的构建；定制化检测规则的制定；基于测试驱动开发校验每条规则；开放测试；</p>
+</li>
+<li><p>文章中使用开源框架OCLINT构建一个静态检测工具，相应的检测架构如下：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx482sx8tzj313e0o80vs.jpg" srcset="/img/loading.gif" lazyload style="zoom:33%;" />
+
+<p>​    1）输入：规则库根据《GJB5369-2005航天型号软件C语言安全子集》代码编写规范和《PVS-Studio缺陷集》代码集合构成；测试代码库由测试人员依据检测规则构成，分为正常用例和缺陷实例。</p>
+<p>​    2）处理引擎：使用开源框架OCLINT。框架底层使用LLVM作为编译处理工具，使用Clang编译器将源代码转化为抽象语法树；分析缺陷代码和正常代码的差异性，记录区分差异性的关键信息；遍历语法树，提取关键信息；使用检测规则扫描代码，获取关键信息；检测是否违背设定，记录违背缺陷的信息，生成报告。</p>
+<p>​    3）输出：提供检测报告。包括源文件路径、缺陷行列位置、违反级别、违反的的规则类型、具体的规则名和提示的错误信息。</p>
+</li>
+<li><p>静态扫描流程：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx4kxmxce2j30b00igq3h.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
+
+
+
+<p>测试系统的功能：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx4l1yd3tfj30gy0dcq3i.jpg" srcset="/img/loading.gif" lazyload style="zoom:45%;" /></li>
+<li><p>静态分析工具实现：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx4l468gnyj30d80cejrq.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
+
+<p>工具检测过程：首先项目检查前，对C/C++工程文件进行解析，获取编译项和依赖库，生成编译数据库，然后将编译数据库中每个文件使用clang编译器转化为抽象语法树，之后遍历抽象语法树并加载规则库中每条规则，最后规则将遍历语法树中获取的信息进行分析，判断是否违背规则，并将违背信息汇总生成测试报告。</p>
+<p>具体实现包括：1）规则集的创建；2）将规则封装为第三方动态库。使用OCLINT命令将编写的规则库转换为动态调用库；3）工具的创建。使用OCLINT命令将编写的代码生成可执行文件，添加到系统路径。</p>
+</li>
+<li><p>抽象语法树是编译器经过语义分析后插入语义信息生成的，包含源代码执行逻辑的全部信息。是基于抽象语法结构将源代码转化为树形结构的一种表示方式，描述如何从文法结构推导程序语言中的语句的过程。下图为辗转相除法源代码和对应的抽象语法树结构：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx4leq7k9tj30o60we40d.jpg" srcset="/img/loading.gif" lazyload style="zoom:38%;" />
+
+<pre><code>  根结点为语句序列，表示程序入口。叶节点表示终止符，就是源代码中的标识符。编译器在词法分析后获得源代码的基本单元，经过语法分析获得源代码的执行流程生成抽象语法树。每条语法规则代表一种语句类型，以父节点生成，内部执行逻辑以父节点为根节点在孩子节点展开。
+</code></pre>
+</li>
+<li><p>抽象语法树构造：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx4ljwau6xj30oo03mq34.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
+
+<p>经过词法、语法和语义三个阶段分析生成。语法树结构是对源代码高层次语义理解的结果，包含文法和语义信息。</p>
+</li>
+<li><p>文章分别介绍从语法树中提取上下文信息、提取程序结构信息、提取控制流信息、提取数据流信息四类信息。通过提取信息和具体缺陷结合，将缺陷大致分为七种类型：重复代码错误、数值范围、越界、控制流、数据流、函数调用、代码格式，以此展开依次进行描述。</p>
+</li>
+<li><p>规则构建：</p>
+</li>
+</ol>
+   <img src="https://tva1.sinaimg.cn/large/008i3skNgy1gx4lr64owxj30j20akgm4.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
+
+<p>   规则构建实际是缺陷特点和语法树信息融合过程。整体架构分为分析设计、编码实现和测试校验三个部分。规则构建具体内容：1）确定规则基本信息  2）分析缺陷代码结构，给出算法思路  3）规则实现及有效性检测。文章使用基于GoogleTest测试框架编写测试用例对编写规则进行测试。</p>
+<p>[2] [3]</p>
+<ol>
+<li>静态代码缺陷分类：缓冲区溢出、空指针引用异常、数据类型转换异常、整数溢出漏洞、内存泄露</li>
+<li>静态分析技术：词法分析、语义分析、控制流分析、数据流分析</li>
+</ol>
+<h4 id="三、下周工作重点及周计划（方案）"><a href="#三、下周工作重点及周计划（方案）" class="headerlink" title="三、下周工作重点及周计划（方案）"></a>三、下周工作重点及周计划（方案）</h4><ul>
+<li><p>继续阅读有关于缺陷定位的文献资料，针对本次报告第一篇论文涉及知识点进行深入研究</p>
+</li>
+<li><p>学习编译原理、程序静态分析相关课程，对于抽象语法树进行了解</p>
+</li>
+<li><p>继续搭建商城项目，练习Vue框架</p>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/BiweekReport/">BiweekReport</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">静态分析</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%A7%84%E5%88%99%E6%A3%80%E6%B5%8B/">规则检测</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%BD%E8%B1%A1%E8%AF%AD%E6%B3%95%E6%A0%91/">抽象语法树</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/22/BiweekReport_20211116_20211130/">
+                        <span class="hidden-mobile">Biweek Report 20211116~20211130</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>leibaio</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Blog</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
