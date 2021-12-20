@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Biweek Report 20211215~20211229</title>
+    <link href="/2021/12/20/BiweekReport_20211215_20211229/"/>
+    <url>/2021/12/20/BiweekReport_20211215_20211229/</url>
+    
+    <content type="html"><![CDATA[<h2 id="双周汇报"><a href="#双周汇报" class="headerlink" title="双周汇报"></a>双周汇报</h2><p>2021～2022学年第一学期  第15、16周（2021年12月15日～2021年12月29日）</p><p>汇报人：汤伟杰    汇报时间：2021年12月20日</p><h4 id="一、本周主要工作内容"><a href="#一、本周主要工作内容" class="headerlink" title="一、本周主要工作内容"></a>一、本周主要工作内容</h4><ul><li><p>文献阅读：根据上次文献《基于抽象语法树的代码静态缺陷检测工具开发》，继续深入阅读，查阅了相关的文献资料和参考文献。</p></li><li><p>学习工作：继续学习Vue框架，继续搭建商城项目，学习使用了Better-Scroll移动端开发滚动效果，项目地址：<a href="https://github.com/leibaio/supermall">https://github.com/leibaio/supermall</a></p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk4ymtwguj31p40u042r.jpg" style="zoom: 28%;" /><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk507koejj31bq0u0wk8.jpg" style="zoom: 36%;" /><p>学校挑战杯创业赛，和同组成员准备相关方案和设计工作；</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk59to8tjj31gs0u0gu6.jpg" style="zoom:33%;" /><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk5bae1m5j31hc0u0mzz.jpg" style="zoom:33%;" /><p>进行软件过程管理相关的知识整理；</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxkmt6mwvdj31js0u0aph.jpg" style="zoom:32%;" /><p>学习非关系型数据库Redis相关基本命令和MyBatis框架；</p><p>并行处理课程，学习相关并行算法，使用OpenMP的PSRS算法，使用MPI的Odd_Even排序以及CUDA编程；</p></li></ul><h4 id="二、阅读文献笔记及总结"><a href="#二、阅读文献笔记及总结" class="headerlink" title="二、阅读文献笔记及总结"></a>二、阅读文献笔记及总结</h4><h5 id="文献："><a href="#文献：" class="headerlink" title="文献："></a>文献：</h5><p>[1]林渤，王枭雄，胡建鹏。基于 GCC 的 C 语言抽象语法树重建与可视化研究 [J]. 软件工程与应用，2021,10 (05):654-660. DOI:10.12677/SEA.2021.105070.</p><p>[2]于屏岗，张威，肖庆。软件静态测试中 C/C++ 抽象语法树的生成 [J]. 测试技术学报，2004,18 (z5):47-50. DOI:10.3969/j.issn.1671-7449.2004.z5.014.</p><p>[3]刘文伟,刘坚.一个重建GCC抽象语法树的方法[J].计算机工程与应用,2004(18):125-128.</p><p>[4]张启航. 基于抽象语法树的代码缺陷检测技术设计与实现[D].北京邮电大学,2020.DOI:10.26969/d.cnki.gbydu.2020.002569.</p><h5 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h5><p>[1]</p><ol><li><p>抽象语法树 (Abstract Syntax Tree, AST) 是一种抽象的表示，它能以树状的形式表现出高级语言的语法结构，而不会表示出真实语法中出现的细节。作为一种中间表示形式，主要被用于预处理，因此可以应用在代码分析领域。代码经过词法分析得到字符序列，再由语法分析得到抽象语法树。抽象语法树的结构简单，根节点表示整个程序，内部节点是抽象语法结构或者单词。</p></li><li><p>GCC 生成的抽象语法树常用的节点类型大致分为 7 种，分别为声明节点 (_decl)、标识符节点 (identifier_node)、类型节点 (_type)、常量节点 (_cst)、表达式节点 (_expr)、列表节点 (_list)、其它节点。每个节点都是以 “@” 符号开始跟上节点的索引，接着是节点类型和信息，包括变量名、类型、所属函数、大小等等，这些信息的值有的是直接显示的，有的是对应节点的索引值。下图为GCC生成的抽象语法树部分节点内容：</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxksdqd16ij30fr06ldgg.jpg"></p></li><li><p>GCC版本不同，对应的生成抽象语法树命令也不同。文中使用-fdump-translation-unit 命令将整个翻译单元的树结构表示形式转储到文件中。生成与源文件名相同的 tu 文件，同时允许调用者以翻译单元 (TU) 表的形式提取这些信息。GCC 直接生成的抽象语法树文本包含了大量的冗余信息，如果直接对原始文本进行解析不仅会降低效率，还可能影响分析的准确率。因此需要对原始的抽象语法树进行重建。重建的主要方法主要是由预处理、标准化、构建树三个方面组成。下图为重建AST流程:</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxksolwx6qj30dh0haq3e.jpg" style="zoom: 67%;" /></li><li><p>原始的 tu 文本由多个节点组成，每个节点都是由标号、节点标识、属性组成。首先要读取 tu 文件，以 “\n@” 为分界符将原始文本分成数个节点，再将其放入一个列表。接着遍历列表，处理每一个节点，将其转换为一个节点属性字典，处理后进行实例化。然后处理实例中 “attr” 字符串，其中属性节点可以有多个，它不仅表示属性，也表示子节点。针对本文所需的可视化需求添加相应实例属性，构建树的结构。最后将处理后的节点重新放入节点列表。</p></li><li><p>抽象语法树可视化方面，使用OrgChart组件，提供 JSON 格式的数据源将其渲染为树形结构。重建后的抽象语法树还不能直接作为可视界面的数据源，需要进行处理后才能使用。数据处理主要操作是将原数据节点内容进行区分，通过添加字段来区分该节点是否为虚节点，并控制节点的显示样式。</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxkst9j7xpj30fr074jro.jpg" style="zoom:88%;" /></li><li><p>文中提供两段相似的源代码，两段代码的功能都是用循环结构打印从 1 到 3 的三个数字，而第一段代码定义的变量名为 i，且使用 for 循环。第二段代码定义变量名为 j，使用的是 while 循环。两种循环结构生成的抽象语法树类似，且不同的的变量名对抽象语法树的结构不产生影响。</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxksxs07f1j30y50u040x.jpg" style="zoom:50%;" /></li></ol><p>[2] </p><ol><li><p>抽象语法树包括表示非保留字终结符的叶子结点和表示语法结构的中间结点组成。抽象语法树 可以进一步完善，可以包含表现语义关系的连接如定义使用链等及类型信息和符号表，并将其视为抽象语法树的结点来对待。最后的抽象语法树将包含所有的、编译器前端从源代码所得到的相关信息并且能够完全体现源程序的语法结构.</p></li><li><p>词法分析 (Lexical analysis) 提供了语法树所需要的符号结点，如常量和名字。语法分析 (Parsing) 则提供了含有代表相应语法结构的中间结点的抽象语法树。语义分析 (Semantic analysis) 最后经过对名字和操作符的处理将语法树转变为一种包括类型信息和符号表的标准形式并将它们连接成树形结构。抽象语法树是编译器前端的最基本的输出。</p></li><li><p>C/C++语法分析技术是建立一个抽象语法树的前提和基础。C/C++语法分析对标记的处理分为3 种，一种处理标志符，一种处理声明，一种处理较难分析的结构体。</p></li><li><p>举例：static unsigned int  * a[5]，b=1;这是一个C/C++中的声明，以一个标志符链表 (static unsigned int) 开始。这个标志符链表描述了变量链表的属性 (static) 和 ‘‘base type” (unsigned int)。标志符链表通常跟随着一个所谓的个体声明 链表。一个个体声明描述了变量的名字 (a和b)，它的类型( * a[5]表示指针数组)，和一个初始值(1)。 通常变量的名字可以在类型描述( * a[5])中找到。然而，在个体声明中的类型描述是不完整的因为‘‘base type”被遗漏了。“base type” 在标志符链表中给出了。在我们的例子中变量a的完整类型应该 是“array of pointer to unsigned int”即“无符号整型指针数组”。画出了一个树图来分别完整的描述一个变量的名字(name)和类型(type)。在上面的例子中就可以产生一个树，如下：</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxktb238uej31640su0vi.jpg" style="zoom:45%;" /><p>​        在上图中，变量a的声明从类型结点var_decl开始。a的类型通过类型结点array，pointer及simple type描述。变量b的声明从类型结点init.-decl开始。b的类型仅仅通过类型simple_type来描述。</p></li><li><p>为了对抽象语法树进行完善和改进，语义分析是必要的。在一个编译器中有很多方法来进行语义分析。大部分方法都是由抽象语法树驱动的。一个常用的方法是使用属性文法。另一个可行的方法是为每一种结点定义一个语义分析程序。在这种情况下语义分析是通 过调用对应的树的根结点的处理程序，该处理程序又调用根结点的孩子结点的处理程序来完成的。</p><p>我们采取的语义分析方法是上面两种方法的折中。我们使用一个定义程序来定义抽象语法树上 每一种类型的结点的基本语义。部分语义处理中使用的值作为属性被有效的存放在抽象语法树上。 那些共有属性成为最终树的一部分，而其他的私有属性则仅用来进行语义分析。</p></li></ol><p>[3]</p><ol><li><p>GCC编译器分为前端和后端两个部分。前端完成语法分析，生成 AST，后端则将 AST转换为 RTL(Register Transfer Language)中间语言，进行优化和代码生成。在语法分析阶段， 源程序中所有实体都被翻译成抽象语法树中各种类型的树结点。GCC 的抽象语法树使用相同的类型 tree 来表示，树(tree) 是中间表示所使用的核心数据结构。一个 tree类型的变量可以 是一个树结点，也可以是一棵子树。</p></li><li><p>建立抽象语法树流程</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxktkhi6cdj30lu0jct9r.jpg" style="zoom:50%;" /></li></ol><h4 id="三、下周工作重点及周计划（方案）"><a href="#三、下周工作重点及周计划（方案）" class="headerlink" title="三、下周工作重点及周计划（方案）"></a>三、下周工作重点及周计划（方案）</h4><ul><li><p>开始相关考试科目的复习</p></li><li><p>继续搭建商城项目，练习Vue框架</p></li><li><p>学习编译原理相关知识</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>BiweekReport</tag>
+      
+      <tag>抽象语法树</tag>
+      
+      <tag>软件过程管理</tag>
+      
+      <tag>Vue</tag>
+      
+      <tag>挑战杯</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Biweek Report 20211201~20211214</title>
     <link href="/2021/12/06/BiweekReport_20211201_20211214/"/>
     <url>/2021/12/06/BiweekReport_20211201_20211214/</url>

@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/astro_mona.png">
+  <link rel="icon" href="/img/astro_mona.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="leibaio">
+  <meta name="keywords" content="">
+  <meta name="description" content="双周汇报2021～2022学年第一学期  第15、16周（2021年12月15日～2021年12月29日） 汇报人：汤伟杰    汇报时间：2021年12月20日 一、本周主要工作内容 文献阅读：根据上次文献《基于抽象语法树的代码静态缺陷检测工具开发》，继续深入阅读，查阅了相关的文献资料和参考文献。  学习工作：继续学习Vue框架，继续搭建商城项目，学习使用了Better-Scroll移动端开发滚">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Biweek Report 20211215~20211229">
+<meta property="og:url" content="https://leibaio.github.io/2021/12/20/BiweekReport_20211215_20211229/index.html">
+<meta property="og:site_name" content="leibaio">
+<meta property="og:description" content="双周汇报2021～2022学年第一学期  第15、16周（2021年12月15日～2021年12月29日） 汇报人：汤伟杰    汇报时间：2021年12月20日 一、本周主要工作内容 文献阅读：根据上次文献《基于抽象语法树的代码静态缺陷检测工具开发》，继续深入阅读，查阅了相关的文献资料和参考文献。  学习工作：继续学习Vue框架，继续搭建商城项目，学习使用了Better-Scroll移动端开发滚">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxk4ymtwguj31p40u042r.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxk507koejj31bq0u0wk8.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxk59to8tjj31gs0u0gu6.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxk5bae1m5j31hc0u0mzz.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxkmt6mwvdj31js0u0aph.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxksdqd16ij30fr06ldgg.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxksolwx6qj30dh0haq3e.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxkst9j7xpj30fr074jro.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxksxs07f1j30y50u040x.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxktb238uej31640su0vi.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxktkhi6cdj30lu0jct9r.jpg">
+<meta property="article:published_time" content="2021-12-20T05:12:45.000Z">
+<meta property="article:modified_time" content="2021-12-20T17:39:25.438Z">
+<meta property="article:author" content="leibaio">
+<meta property="article:tag" content="BiweekReport">
+<meta property="article:tag" content="抽象语法树">
+<meta property="article:tag" content="软件过程管理">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="挑战杯">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gxk4ymtwguj31p40u042r.jpg">
+  
+  <title>Biweek Report 20211215~20211229 - leibaio</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"leibaio.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>leibaio</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Biweek Report 20211215~20211229">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-12-20 13:12" pubdate>
+        2021年12月20日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Biweek Report 20211215~20211229</h1>
+            
+            <div class="markdown-body">
+              <h2 id="双周汇报"><a href="#双周汇报" class="headerlink" title="双周汇报"></a>双周汇报</h2><p>2021～2022学年第一学期  第15、16周（2021年12月15日～2021年12月29日）</p>
+<p>汇报人：汤伟杰    汇报时间：2021年12月20日</p>
+<h4 id="一、本周主要工作内容"><a href="#一、本周主要工作内容" class="headerlink" title="一、本周主要工作内容"></a>一、本周主要工作内容</h4><ul>
+<li><p>文献阅读：根据上次文献《基于抽象语法树的代码静态缺陷检测工具开发》，继续深入阅读，查阅了相关的文献资料和参考文献。</p>
+</li>
+<li><p>学习工作：继续学习Vue框架，继续搭建商城项目，学习使用了Better-Scroll移动端开发滚动效果，项目地址：<a target="_blank" rel="noopener" href="https://github.com/leibaio/supermall">https://github.com/leibaio/supermall</a></p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk4ymtwguj31p40u042r.jpg" srcset="/img/loading.gif" lazyload style="zoom: 28%;" />
+
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk507koejj31bq0u0wk8.jpg" srcset="/img/loading.gif" lazyload style="zoom: 36%;" />
+
+<p>学校挑战杯创业赛，和同组成员准备相关方案和设计工作；</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk59to8tjj31gs0u0gu6.jpg" srcset="/img/loading.gif" lazyload style="zoom:33%;" />
+
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxk5bae1m5j31hc0u0mzz.jpg" srcset="/img/loading.gif" lazyload style="zoom:33%;" />
+
+<p>进行软件过程管理相关的知识整理；</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxkmt6mwvdj31js0u0aph.jpg" srcset="/img/loading.gif" lazyload style="zoom:32%;" />
+
+<p>学习非关系型数据库Redis相关基本命令和MyBatis框架；</p>
+<p>并行处理课程，学习相关并行算法，使用OpenMP的PSRS算法，使用MPI的Odd_Even排序以及CUDA编程；</p>
+</li>
+</ul>
+<h4 id="二、阅读文献笔记及总结"><a href="#二、阅读文献笔记及总结" class="headerlink" title="二、阅读文献笔记及总结"></a>二、阅读文献笔记及总结</h4><h5 id="文献："><a href="#文献：" class="headerlink" title="文献："></a>文献：</h5><p>[1]林渤，王枭雄，胡建鹏。基于 GCC 的 C 语言抽象语法树重建与可视化研究 [J]. 软件工程与应用，2021,10 (05):654-660. DOI:10.12677/SEA.2021.105070.</p>
+<p>[2]于屏岗，张威，肖庆。软件静态测试中 C/C++ 抽象语法树的生成 [J]. 测试技术学报，2004,18 (z5):47-50. DOI:10.3969/j.issn.1671-7449.2004.z5.014.</p>
+<p>[3]刘文伟,刘坚.一个重建GCC抽象语法树的方法[J].计算机工程与应用,2004(18):125-128.</p>
+<p>[4]张启航. 基于抽象语法树的代码缺陷检测技术设计与实现[D].北京邮电大学,2020.DOI:10.26969/d.cnki.gbydu.2020.002569.</p>
+<h5 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h5><p>[1]</p>
+<ol>
+<li><p>抽象语法树 (Abstract Syntax Tree, AST) 是一种抽象的表示，它能以树状的形式表现出高级语言的语法结构，而不会表示出真实语法中出现的细节。作为一种中间表示形式，主要被用于预处理，因此可以应用在代码分析领域。代码经过词法分析得到字符序列，再由语法分析得到抽象语法树。抽象语法树的结构简单，根节点表示整个程序，内部节点是抽象语法结构或者单词。</p>
+</li>
+<li><p>GCC 生成的抽象语法树常用的节点类型大致分为 7 种，分别为声明节点 (_decl)、标识符节点 (identifier_node)、类型节点 (_type)、常量节点 (_cst)、表达式节点 (_expr)、列表节点 (_list)、其它节点。每个节点都是以 “@” 符号开始跟上节点的索引，接着是节点类型和信息，包括变量名、类型、所属函数、大小等等，这些信息的值有的是直接显示的，有的是对应节点的索引值。下图为GCC生成的抽象语法树部分节点内容：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxksdqd16ij30fr06ldgg.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>GCC版本不同，对应的生成抽象语法树命令也不同。文中使用-fdump-translation-unit 命令将整个翻译单元的树结构表示形式转储到文件中。生成与源文件名相同的 tu 文件，同时允许调用者以翻译单元 (TU) 表的形式提取这些信息。GCC 直接生成的抽象语法树文本包含了大量的冗余信息，如果直接对原始文本进行解析不仅会降低效率，还可能影响分析的准确率。因此需要对原始的抽象语法树进行重建。重建的主要方法主要是由预处理、标准化、构建树三个方面组成。下图为重建AST流程:</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxksolwx6qj30dh0haq3e.jpg" srcset="/img/loading.gif" lazyload style="zoom: 67%;" /></li>
+<li><p>原始的 tu 文本由多个节点组成，每个节点都是由标号、节点标识、属性组成。首先要读取 tu 文件，以 “\n@” 为分界符将原始文本分成数个节点，再将其放入一个列表。接着遍历列表，处理每一个节点，将其转换为一个节点属性字典，处理后进行实例化。然后处理实例中 “attr” 字符串，其中属性节点可以有多个，它不仅表示属性，也表示子节点。针对本文所需的可视化需求添加相应实例属性，构建树的结构。最后将处理后的节点重新放入节点列表。</p>
+</li>
+<li><p>抽象语法树可视化方面，使用OrgChart组件，提供 JSON 格式的数据源将其渲染为树形结构。重建后的抽象语法树还不能直接作为可视界面的数据源，需要进行处理后才能使用。数据处理主要操作是将原数据节点内容进行区分，通过添加字段来区分该节点是否为虚节点，并控制节点的显示样式。</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxkst9j7xpj30fr074jro.jpg" srcset="/img/loading.gif" lazyload style="zoom:88%;" /></li>
+<li><p>文中提供两段相似的源代码，两段代码的功能都是用循环结构打印从 1 到 3 的三个数字，而第一段代码定义的变量名为 i，且使用 for 循环。第二段代码定义变量名为 j，使用的是 while 循环。两种循环结构生成的抽象语法树类似，且不同的的变量名对抽象语法树的结构不产生影响。</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxksxs07f1j30y50u040x.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" /></li>
+</ol>
+<p>[2] </p>
+<ol>
+<li><p>抽象语法树包括表示非保留字终结符的叶子结点和表示语法结构的中间结点组成。抽象语法树 可以进一步完善，可以包含表现语义关系的连接如定义使用链等及类型信息和符号表，并将其视为抽象语法树的结点来对待。最后的抽象语法树将包含所有的、编译器前端从源代码所得到的相关信息并且能够完全体现源程序的语法结构.</p>
+</li>
+<li><p>词法分析 (Lexical analysis) 提供了语法树所需要的符号结点，如常量和名字。语法分析 (Parsing) 则提供了含有代表相应语法结构的中间结点的抽象语法树。语义分析 (Semantic analysis) 最后经过对名字和操作符的处理将语法树转变为一种包括类型信息和符号表的标准形式并将它们连接成树形结构。抽象语法树是编译器前端的最基本的输出。</p>
+</li>
+<li><p>C/C++语法分析技术是建立一个抽象语法树的前提和基础。C/C++语法分析对标记的处理分为3 种，一种处理标志符，一种处理声明，一种处理较难分析的结构体。</p>
+</li>
+<li><p>举例：static unsigned int  * a[5]，b=1;这是一个C/C++中的声明，以一个标志符链表 (static unsigned int) 开始。这个标志符链表描述了变量链表的属性 (static) 和 ‘‘base type” (unsigned int)。标志符链表通常跟随着一个所谓的个体声明 链表。一个个体声明描述了变量的名字 (a和b)，它的类型( * a[5]表示指针数组)，和一个初始值(1)。 通常变量的名字可以在类型描述( * a[5])中找到。然而，在个体声明中的类型描述是不完整的因为‘‘base type”被遗漏了。“base type” 在标志符链表中给出了。在我们的例子中变量a的完整类型应该 是“array of pointer to unsigned int”即“无符号整型指针数组”。画出了一个树图来分别完整的描述一个变量的名字(name)和类型(type)。在上面的例子中就可以产生一个树，如下：</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxktb238uej31640su0vi.jpg" srcset="/img/loading.gif" lazyload style="zoom:45%;" />
+
+<p>​        在上图中，变量a的声明从类型结点var_decl开始。a的类型通过类型结点array，pointer及simple type描述。变量b的声明从类型结点init.-decl开始。b的类型仅仅通过类型simple_type来描述。</p>
+</li>
+<li><p>为了对抽象语法树进行完善和改进，语义分析是必要的。在一个编译器中有很多方法来进行语义分析。大部分方法都是由抽象语法树驱动的。一个常用的方法是使用属性文法。另一个可行的方法是为每一种结点定义一个语义分析程序。在这种情况下语义分析是通 过调用对应的树的根结点的处理程序，该处理程序又调用根结点的孩子结点的处理程序来完成的。</p>
+<p>我们采取的语义分析方法是上面两种方法的折中。我们使用一个定义程序来定义抽象语法树上 每一种类型的结点的基本语义。部分语义处理中使用的值作为属性被有效的存放在抽象语法树上。 那些共有属性成为最终树的一部分，而其他的私有属性则仅用来进行语义分析。</p>
+</li>
+</ol>
+<p>[3]</p>
+<ol>
+<li><p>GCC编译器分为前端和后端两个部分。前端完成语法分析，生成 AST，后端则将 AST转换为 RTL(Register Transfer Language)中间语言，进行优化和代码生成。在语法分析阶段， 源程序中所有实体都被翻译成抽象语法树中各种类型的树结点。GCC 的抽象语法树使用相同的类型 tree 来表示，树(tree) 是中间表示所使用的核心数据结构。一个 tree类型的变量可以 是一个树结点，也可以是一棵子树。</p>
+</li>
+<li><p>建立抽象语法树流程</p>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxktkhi6cdj30lu0jct9r.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" /></li>
+</ol>
+<h4 id="三、下周工作重点及周计划（方案）"><a href="#三、下周工作重点及周计划（方案）" class="headerlink" title="三、下周工作重点及周计划（方案）"></a>三、下周工作重点及周计划（方案）</h4><ul>
+<li><p>开始相关考试科目的复习</p>
+</li>
+<li><p>继续搭建商城项目，练习Vue框架</p>
+</li>
+<li><p>学习编译原理相关知识</p>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/BiweekReport/">BiweekReport</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%BD%E8%B1%A1%E8%AF%AD%E6%B3%95%E6%A0%91/">抽象语法树</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E7%AE%A1%E7%90%86/">软件过程管理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Vue/">Vue</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8C%91%E6%88%98%E6%9D%AF/">挑战杯</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/12/06/BiweekReport_20211201_20211214/">
+                        <span class="hidden-mobile">Biweek Report 20211201~20211214</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>leibaio</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Blog</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
